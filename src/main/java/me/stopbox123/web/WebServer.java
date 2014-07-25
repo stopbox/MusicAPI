@@ -11,8 +11,8 @@ import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 
 public class WebServer {
-	public static void runServer() {
-        Server server = new Server(9090);
+	public void runServer() {
+        Server server = new Server(8080);
  
         ResourceHandler resource_handler = new ResourceHandler();
         resource_handler.setDirectoriesListed(true);

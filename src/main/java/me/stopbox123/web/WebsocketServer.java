@@ -49,6 +49,10 @@ public class WebsocketServer extends WebSocketServer {
         s.start();
         Bukkit.getLogger().info("Websocket server started on port: " + s.getPort());
     }
+    
+    public static void stopServer() throws IOException, InterruptedException {
+    	s.stop();
+    }
  
     @Override
     public void onError(WebSocket conn, Exception ex) {
