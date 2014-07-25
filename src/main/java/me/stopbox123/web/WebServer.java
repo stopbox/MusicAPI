@@ -11,9 +11,10 @@ import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
 
 public class WebServer {
-	public void runServer() {
-        Server server = new Server(9090);
- 
+	private static Server server = null;
+	
+	public static void runServer() {
+		server = new Server(9090);
         ResourceHandler resource_handler = new ResourceHandler();
         resource_handler.setDirectoriesListed(true);
         resource_handler.setWelcomeFiles(new String[] { "index.html" });
@@ -31,4 +32,13 @@ public class WebServer {
             e.printStackTrace();
         }
     }
+
+	public static void stopServer() {
+		try {
+			server.stop();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
