@@ -12,7 +12,7 @@ import org.eclipse.jetty.server.handler.ResourceHandler;
 
 public class WebServer {
 	public void runServer() {
-        Server server = new Server(8080);
+        Server server = new Server(9090);
  
         ResourceHandler resource_handler = new ResourceHandler();
         resource_handler.setDirectoriesListed(true);

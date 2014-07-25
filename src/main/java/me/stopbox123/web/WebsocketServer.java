@@ -44,7 +44,7 @@ public class WebsocketServer extends WebSocketServer {
  
     public static void runServer() throws InterruptedException, IOException {
         WebSocketImpl.DEBUG = true;
-        int port = 8887;
+        int port = 9090;
         s = new WebsocketServer(port);
         s.start();
         Bukkit.getLogger().info("Websocket server started on port: " + s.getPort());
