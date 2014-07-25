@@ -18,7 +18,7 @@ public class MusicAPI extends JavaPlugin {
 		instance = this;
 		WebServer.runServer();
 		try {
-			WebsocketServer.s.start();
+			WebsocketServer.runServer();
 		} catch (Exception e) {
 		}
 	}
