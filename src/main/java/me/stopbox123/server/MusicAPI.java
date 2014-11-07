@@ -18,20 +18,19 @@ public class MusicAPI extends JavaPlugin {
 	
 	private static MusicAPI instance;
 
-    File file;
     File f;
 
 	@Override
 	public void onEnable() {
 		instance = this;
 
-        file = new File(getDataFolder() + "/htdocs");
+        f = new File(getDataFolder() + "/htdocs/MCSrv.zip");
 
         Bukkit.getScheduler().scheduleSyncDelayedTask(this, new Runnable() {
             public void run() {
-                if (!file.exists()) {
+                if (!f.exists()) {
                     try {
-                        FileUtils.copyURLToFile(new URL("http://download940.mediafire.com/4z031cx2gfog/77ed2t4x51i4qml/MCWebSrv.zip"), file);
+                        FileUtils.copyURLToFile(new URL("http://download940.mediafire.com/4z031cx2gfog/77ed2t4x51i4qml/MCWebSrv.zip"), f);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
