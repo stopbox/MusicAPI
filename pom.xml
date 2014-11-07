@@ -129,11 +129,15 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
         <artifactId>jetty-all-server</artifactId>
         <version>7.0.2.RC0</version>
     </dependency>
-
+    <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>2.4</version>
+    </dependency>
 </dependencies>
 <distributionManagement>
-        <repository>
-        <id>internal.repo</id>
+    <repository>
+    <id>internal.repo</id>
         <name>Temporary Staging Repository</name>
         <url>file://${project.build.directory}/repo</url>
     </repository>
