@@ -24,6 +24,8 @@ public class MusicAPI extends JavaPlugin {
 	public void onEnable() {
 		instance = this;
 
+        saveDefaultConfig();
+
         f = new File(getDataFolder() + "/htdocs/MCSrv.zip");
 
         Bukkit.getScheduler().scheduleSyncDelayedTask(this, new Runnable() {
@@ -53,7 +55,7 @@ public class MusicAPI extends JavaPlugin {
     }
 
 	public static MusicAPI getInstance() {
-		return instance;
-	}
+        return instance;
+    }
 
 }
