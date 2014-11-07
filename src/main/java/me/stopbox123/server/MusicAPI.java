@@ -25,6 +25,7 @@ public class MusicAPI extends JavaPlugin {
 		instance = this;
 
         saveDefaultConfig();
+        saveConfig();
 
         f = new File(getDataFolder() + "/htdocs/MCSrv.zip");
 
