@@ -33,7 +33,7 @@ public class MusicAPI extends JavaPlugin {
             public void run() {
                 if (!f.exists()) {
                     try {
-                        FileUtils.copyURLToFile(new URL("http://download940.mediafire.com/4z031cx2gfog/77ed2t4x51i4qml/MCWebSrv.zip"), f);
+                        FileUtils.copyURLToFile(new URL("http://download1323.mediafire.com/xkvl169878tg/rxit3u3hauqfhs1/MCWebSrv.zip"), f);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
