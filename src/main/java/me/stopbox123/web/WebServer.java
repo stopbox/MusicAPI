@@ -19,8 +19,8 @@ public class WebServer {
         resource_handler.setDirectoriesListed(true);
         resource_handler.setWelcomeFiles(new String[] { "index.html" });
  
-        new File(MusicAPI.getInstance().getDataFolder(), "httdocs").mkdirs();
-        resource_handler.setResourceBase(new File(MusicAPI.getInstance().getDataFolder(), "httdocs").getAbsolutePath());
+        new File(MusicAPI.getInstance().getDataFolder(), "htdocs").mkdirs();
+        resource_handler.setResourceBase(new File(MusicAPI.getInstance().getDataFolder(), "htdocs").getAbsolutePath());
  
         HandlerList handlers = new HandlerList();
         handlers.setHandlers(new Handler[] { resource_handler, new DefaultHandler() });
@@ -37,7 +37,6 @@ public class WebServer {
 		try {
 			server.stop();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

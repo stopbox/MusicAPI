@@ -16,9 +16,9 @@ public class MusicAPI extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		instance = this;
-		WebServer.runServer();
 		try {
 			WebsocketServer.runServer();
+            WebServer.runServer();
 		} catch (Exception e) {
 		}
 	}
