@@ -30,7 +30,7 @@ public class WebsocketServer extends WebSocketServer {
  
     @Override
     public void onClose(WebSocket conn, int code, String reason, boolean remote) {
-      //  WebsocketSessionManager.getSessionManager().endSession(conn.getRemoteSocketAddress().getAddress().getHostAddress());
+        WebsocketSessionManager.getSessionManager().endSession(conn.getRemoteSocketAddress().getAddress().getHostAddress());
         Bukkit.getLogger().info(conn + " has disconnected form the Websocket server");
     }
  
