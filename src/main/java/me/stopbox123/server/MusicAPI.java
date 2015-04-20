@@ -15,7 +15,6 @@ public class MusicAPI extends JavaPlugin {
 
         saveDefaultConfig();
         saveConfig();
-        sfdfdfsfsfdasd
 
         try {
             WebsocketServer.runServer();
